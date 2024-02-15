@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cond1.css" />
+  </head>
+</html>
+<body>
+  <div>
+    <ul>
+      <li>
+        <h1>Residencial Souza do Vale IV</h1>
+   
+    <p>Sobre Residencial: Com um projeto arrojado em um terreno 10x20 foram feito 12 apartamentos com 1 quarto 6 na parte da frente e 6 na parte de traz do condomínio todos com 1 quarto, sala, cozinha de serviço, o prédio e composto por 3 andares sendo 4 ap por andar seguindo a mesma qualidade de moradia dos outros, ele fica ao lado da sombra.</p>
+    
+  
+  <!-- Contêiner da imagem com classe "imagem-container" -->
+  <div class="Imagem"  onclick="trocarImagem()">
+    <!-- Imagem 1 com classe "imagem ativa" -->
+    <img class="imagem ativa " src="assets/Imagem do WhatsApp de 2024-01-31 à(s) 14.25.07_c3ba3524.jpg" alt="Descrição da imagem 1">
+    <!-- Imagem 2 com classe "imagem inativa" -->
+    <img class="imagem inativa" src="assets/avatar-light.png" alt="Descrição da imagem 2">
+    <!-- Imagem 3 com classe "imagem inativa" -->
+    <img class="imagem inativa" src="assets/pngegg.png" alt="Descrição da imagem 3">
+    <!-- Imagem 4 com classe "imagem inativa" -->
+    <img class="imagem inativa" src="assets/pngegg.png" alt="Descrição da imagem 4">
+    <!-- Imagem 5 com classe "imagem inativa" -->
+    <img class="imagem inativa" src="assets/avatar-light.png" alt="Descrição da imagem 5">
+
+
+  <!-- Script JavaScript para alternar entre as imagens -->
+  <script>
+    function trocarImagem() {
+      var imagens = document.querySelectorAll('.imagem');
+
+      // Encontra a imagem ativa
+      var imagemAtiva = document.querySelector('.imagem.ativa');
+      var indiceAtivo = Array.from(imagens).indexOf(imagemAtiva);
+
+      // Calcula o próximo índice
+      var proximoIndice = (indiceAtivo + 1) % imagens.length;
+
+      // Troca as classes para inverter a visibilidade
+      imagemAtiva.classList.remove('ativa');
+      imagemAtiva.classList.add('inativa');
+
+      imagens[proximoIndice].classList.remove('inativa');
+      imagens[proximoIndice].classList.add('ativa');
+    }
+  </script>
+
+</body>
+</html>

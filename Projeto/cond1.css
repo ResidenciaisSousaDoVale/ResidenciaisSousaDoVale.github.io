@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-color: gold;
+  --bg-url: url(./assets/Blacker.jpg);
+  --stroke-color: rgba(225, 255, 255, 0.2);
+  --surface-color: rgba(225, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(225, 255, 255, 0.2);
+  --swicht-bg-url: url(./assets/moon-stars.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  
+}
+body * {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--text-color);
+}
+
+ul {
+  text-align: center;
+  padding: 60px;
+  list-style-type: none;
+}
+ul li p {
+  text-align: center;
+  font-size: 22px;
+  padding: 23px;
+  display: inline-block;
+  word-wrap: break-word;
+  font-family: italic;
+}
+head a {
+  display: flex;
+  align-items: center;
+}
+  
+
+    /* Estilo da imagem ativa (visível) */
+    .imagem.ativa {
+      opacity: 1; 
+       width: 240px;
+      transition: opacity 0.3s ease-in-out ;
+      align-items: center;
+      padding: 2px;
+
+    }
+
+    /* Estilo da imagem inativa (invisível) */
+    .imagem.inativa {
+      opacity: 0;
+      width: 240px;
+      position: absolute;
+      align-items: center;
+      padding: 2px;
+   
+    }
+ 
+  
